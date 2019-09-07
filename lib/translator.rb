@@ -10,13 +10,8 @@ def load_library(path)
   emoticons_list.each { |k,v|
     jp_emoticon = emoticons_list[k][1]
     eng_emoticon = emoticons_list[k][0]
-    hash[:get_meaning] <<  jp_emoticon
     hash[:get_meaning][jp_emoticon] = k
-    hash[:get_emoticon] << eng_emoticon
     hash[:get_emoticon][eng_emoticon] = jp_emoticon
-    
-    
-    
   }
   hash
 end
